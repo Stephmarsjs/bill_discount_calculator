@@ -91,6 +91,21 @@ getTipPercentage(i) {
         tipPercent: newSate
     }, function() {
         this.calculateCosts();
-    })
-  };
+    });
+  }
+}
+
+
+calculateCost() {
+    let newBilltotal = parseFloat(this.state.billTotal);
+    if(!Number.isNaN(newBillTotal)) {
+        let newTipTotal, newCostPP;
+        newTipTotal = parseFloat(newBillTotal * this.state.tipPercent);
+        newCostPP = newBillTotal + newTripTotal;
+        newCostPP = newCostPP / this.state.numberOfPeople;
+      this.state({
+          tipTotal: newTipTotal,
+          costPP: newCostPP
+      });  
+    }
 }
