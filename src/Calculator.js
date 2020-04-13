@@ -84,3 +84,13 @@ updatePartyCount(sum) {
         });
     }
 }
+
+getTipPercentage(i) {
+    let newState = this.state.percentages[i];
+    this.setState({
+        tipPercent: newSate
+    }, function() {
+        this.calculateCosts();
+    })
+  };
+}
