@@ -92,7 +92,6 @@ getTipPercentage(i) {
     }, function() {
         this.calculateCosts();
     });
-  }
 }
 
 
@@ -127,8 +126,7 @@ render() {
             handleInputChange={this.handleInputChange} />
         <Buttons onClickButton={this.onClickButton} buttons={this.state.buttons} />
       </div>      
-
     )
+  }
 }
-
 export default Calculator;
