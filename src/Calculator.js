@@ -109,3 +109,26 @@ calculateCost() {
       });  
     }
 }
+
+render() {
+    return(
+      <div>   
+        <Results
+            costPerPerson={this.state.costPP}
+            billTotal={this.state.billTotal}
+            tipTotal={this.state.tipTotal}
+            partyCount={this.state.numberOfPeople} />
+            <Inputs
+            billTotal={this.state.billTotal}
+            tipTotal={this.state.tipTotal}
+            getPartyCount={this.updatePartyCount}
+            partyCount={this.state.numberOfPeople}
+            getTipPercentage={this.getTipPercentage}
+            handleInputChange={this.handleInputChange} />
+        <Buttons onClickButton={this.onClickButton} buttons={this.state.buttons} />
+      </div>      
+
+    )
+}
+
+export default Calculator;
