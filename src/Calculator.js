@@ -35,7 +35,7 @@ class Calculator extends Component {
     }
 
     updatedBillTotal(i) {
-        let newState;
+        let newState; 
 
         if(this.state.clickedBtn === '.' && this.state.billTotal.includes('.')) {
             return null;
@@ -88,7 +88,7 @@ updatePartyCount(sum) {
 getTipPercentage(i) {
     let newState = this.state.percentages[i];
     this.setState({
-        tipPercent: newSate
+        tipPercent: newState
     }, function() {
         this.calculateCosts();
     });
@@ -96,11 +96,11 @@ getTipPercentage(i) {
 
 
 calculateCost() {
-    let newBilltotal = parseFloat(this.state.billTotal);
+    let newBillTotal = parseFloat(this.state.billTotal);
     if(!Number.isNaN(newBillTotal)) {
         let newTipTotal, newCostPP;
         newTipTotal = parseFloat(newBillTotal * this.state.tipPercent);
-        newCostPP = newBillTotal + newTripTotal;
+        newCostPP = newBillTotal + newTipTotal;
         newCostPP = newCostPP / this.state.numberOfPeople;
       this.state({
           tipTotal: newTipTotal,
